@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_2"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="270dp"
+        android:id="@+id/settings_Topbar"
+        android:background="@drawable/gradation_black"
+        tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_layout"
+                tools:ignore="MissingConstraints">
+            <TextView android:id="@+id/settingsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DYSON -"
+            android:layout_alignParentTop="true"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="#000000"/>
+        <TextView android:id="@+id/settingsText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="San Franciso"
+            android:textSize="14dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/settingsText"
+            android:textColor="@android:color/darker_gray"/>
+        <TextView
+            android:id="@+id/backButton"
+            android:background="@drawable/my_custom_background"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:textColor="#24a0ed"
+            android:textSize="16dp"
+            android:layout_alignParentRight="true"
+            android:text="FOLLOW"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/accountButton"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/details_card1"
+                    android:layout_below="@+id/settingsText1"
+                    android:layout_marginTop="20dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="#FFFFFF">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/details_layout"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/introduce_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="INTRODUCE"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <com.borjabravo.readmoretextview.ReadMoreTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/introduce_text"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        app:colorClickableText="#24a0ed"
+                        android:text="Green apple pie is a kind of dessert made by baking, with flour, mango and eng as the main ingredients.Tase very good. Good for breakfast"
+                        android:textSize="14dp"
+                        android:id="@+id/details_text"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:id="@+id/line"
+                        android:layout_below="@+id/details_text"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/darker_gray"></View>
+                    <TextView
+                        android:id="@+id/dynamic_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@+id/line"
+                        android:text="DYNAMIC"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:weightSum="3"
+                        android:id="@+id/image_layout"
+                        android:layout_below="@+id/dynamic_text">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:cardUseCompatPadding="true"
+                            android:id="@+id/details_card_imageView1"
+                            android:layout_below="@+id/settingsText1"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="100dp"
+                            android:scaleType="centerCrop"
+                            android:layout_weight="1"
+                            android:src="@drawable/image_1"
+                            android:layout_height="150dp" />
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:weightSum="2"
+                            android:orientation="vertical">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardUseCompatPadding="true"
+                                android:id="@+id/details_card_imageView2"
+                                android:layout_below="@+id/settingsText1"
+                                app:cardPreventCornerOverlap="false"
+                                app:cardCornerRadius="20dp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF">
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_2"
+                                android:layout_height="match_parent" />
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardUseCompatPadding="true"
+                                android:id="@+id/details_card_imageView3"
+                                android:layout_below="@+id/settingsText1"
+                                app:cardPreventCornerOverlap="false"
+                                app:cardCornerRadius="20dp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF">
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_3"
+                                android:layout_height="match_parent" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardUseCompatPadding="true"
+                            android:id="@+id/details_card_imageView5"
+                            android:layout_below="@+id/settingsText1"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardCornerRadius="20dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#FFFFFF">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/gradation_black"
+                                android:text="+8"
+                                android:gravity="bottom|center_horizontal"
+                                android:textSize="18dp"
+                                android:paddingBottom="20dp"
+                                android:textColor="#FFFFFF"/>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/seeAllButton"
+                        android:background="@drawable/my_custom_background_filled"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:layout_gravity="right"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_alignParentRight="true"
+                        android:text="SEE ALL"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@+id/image_layout"/>
+                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
